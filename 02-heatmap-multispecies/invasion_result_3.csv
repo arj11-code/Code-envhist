@@ -1,0 +1,4 @@
+Dilution,c_r value,f_r,phi_R0max,final_abundance,species_type
+10.0,0.1,0.01,0.001,0.08888735424701472,resident
+10.0,0.1,0.483103448275862,0.0381724137931034,0.11313284767364752,resident
+10.0,0.1,0.310515,0.037634,0.0,ESS_invader

@@ -1,0 +1,31 @@
+#!/bin/bash
+# Submission script: "tasks are evenly distributed across nodes"
+
+# Job name
+#SBATCH --job-name=mutation
+# Output file name
+#SBATCH --output=mutation.out
+#SBATCH --error=mutation.err
+#
+# Set the required partition
+#SBATCH --partition=short,long
+# Job array: 128 independent tasks
+#SBATCH --array=0-127
+# One task per job (1 core)
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=1
+#SBATCH --mem-per-cpu=1G
+#
+# Total wall-time
+#SBATCH --time=24:00:00
+#
+# The below statement is required if the code is floating-point intensive and CPU-bound [Optional]
+#SBATCH --threads-per-core=1
+#
+# To get email alert [Optional] 
+#SBATCH --mail-user=arjun.mandyam@icts.res.in
+#SBATCH --mail-type=ALL 
+#
+date
+python3 evolutionary_dynamics_trajectories.py $SLURM_ARRAY_TASK_ID
+date
