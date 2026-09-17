@@ -70,7 +70,7 @@ print(lambd('r', phi_R0max, e_max, k_n, f))
 '''
 
 # Inactive fraction of ribosomes
-'''
+
 e_max = 5.5
 k_nlist = np.linspace(0,10, 1000)
 f = {'r': 1, 'p': 1}
@@ -97,12 +97,12 @@ for phi_R0max, color in zip(phi_R0max_values, colors):
     plt.plot(lamdlist, growthrate, color=color, label=rf"$\phi_R^{{0,\mathrm{{max}}}}$ = {phi_R0max}")
 
 plt.xlabel(r"Growth rate (h$^{-1}$)")
-plt.ylabel("Inactive ribosome fraction, $\phi_\mathrm{R}^0$ ")
+plt.ylabel(r"Inactive ribosome fraction, $1 - f_\mathrm{R}^\mathrm{act} (\lambda)$ ")
 plt.legend()
 plt.tight_layout()
 plt.savefig("inact_fraction.pdf", format='pdf')
 plt.show()
-'''
+
 # Growth lag tradeoff with inactive ribosomes
 '''
 e_max = 5.5
@@ -184,7 +184,7 @@ plt.savefig("inact_fraction.pdf", format='pdf')
 plt.show()
 '''
 
-
+'''
 # This code simulates actual dynamics
 # parameters
 e_max = 5.5
@@ -255,7 +255,7 @@ plt.xlim((0,53))
 plt.ylim((1e-3, 200))
 plt.savefig("Result_fig3_res.svg", format="svg", bbox_inches="tight")
 plt.show()
-
+'''
 
 '''
 D = 27.825594022071200
